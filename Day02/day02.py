@@ -3,7 +3,7 @@ from aocd.models import Puzzle
 puzzle = Puzzle(year=2022, day=2)
 
 # Store raw data in a file for later
-with open("Day02/puzzle.txt", "w") as f:
+with open("Day02/puzzle.txt", "w", encoding='utf-8') as f:
     f.write(puzzle.input_data)
 
 
