@@ -1,2 +1,2 @@
+# advent-of-code-data 1.2.x pip requirement
 advent-of-code-data~=1.2.0
-parse~=1.19.0
