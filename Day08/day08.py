@@ -20,7 +20,7 @@ def is_visible_from_border(data, x, y):
         return True
 
     # Look in all directions
-    
+
     # Look from point to "north"
     for i in range(x - 1, -1, -1):
         # Check if the tree is obstructing the view
@@ -30,7 +30,7 @@ def is_visible_from_border(data, x, y):
     else:
         # If we didn't break, the point is visible
         return True
-    
+
     # Look from point to "south"
     for i in range(x + 1, data.shape[0]):
         # Check if the tree is obstructing the view
@@ -40,7 +40,7 @@ def is_visible_from_border(data, x, y):
     else:
         # If we didn't break, the point is visible
         return True
-    
+
     # Look from point to "west"
     for i in range(y - 1, -1, -1):
         # Check if the tree is obstructing the view
@@ -61,7 +61,7 @@ def is_visible_from_border(data, x, y):
         # If we didn't break, the point is visible
         return True
 
-    
+
     # The point is not visible
     return False
 
@@ -77,7 +77,7 @@ def get_view_distance(data, x, y):
         if data[i, y] >= data[x, y]:
             # If it is, break
             break
-    
+
     scenic_score *= count
 
     # South
@@ -110,7 +110,7 @@ def get_view_distance(data, x, y):
         if data[x, i] >= data[x, y]:
             # If it is, break
             break
-        
+
     scenic_score *= count
 
     return scenic_score
