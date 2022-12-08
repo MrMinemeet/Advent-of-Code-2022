@@ -1,2 +1,3 @@
-advent-of-code-data~=1.2.0
+advent-of-code-data~=1.3.0
 parse~=1.19.0
+numpy~=1.23.0
