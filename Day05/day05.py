@@ -7,47 +7,48 @@ puzzle = Puzzle(year=2022, day=5)
 with open("Day05/puzzle.txt", "w", encoding='utf-8') as f:
     f.write(puzzle.input_data)
 
+
 def load(data):
-    stacks = {} # {stack: [row1, row2, row3, row4]}
-    tmpstack = []
+    stacks = {}  # {stack: [row1, row2, row3, row4]}
+    tmp_stack = []
     # Load the stacks only
     for line in data:
-        tmpstack.append(line)
+        tmp_stack.append(line)
         # Check if empty line
         if len(line) == 0:
             break
 
-    # Calculate width using numbers in last line of tmpstack
+    # Calculate width using numbers in last line of tmp_stack
     # -2 because one is empty
-    width = len(tmpstack[len(tmpstack) - 2].split()) - 1
+    width = len(tmp_stack[len(tmp_stack) - 2].split()) - 1
 
-    # Go through each column number and then move up at that posision to get the containers
-    for i in range(0, len(tmpstack[width - 1]) - 1):
-        if tmpstack[width][i] == ' ':
+    # Go through each column number and then move up at that position to get the containers
+    for i in range(0, len(tmp_stack[width - 1]) - 1):
+        if tmp_stack[width][i] == ' ':
             continue
 
-        stacknumber = tmpstack[width][i]
+        stack_number = tmp_stack[width][i]
 
         # Move up
         # -3 because empty line and so
-        for j in range(len(tmpstack) - 3, -1, -1):
+        for j in range(len(tmp_stack) - 3, -1, -1):
             # Skip empty containers
-            if tmpstack[j][i] == ' ':
+            if tmp_stack[j][i] == ' ':
                 continue
 
-            container = tmpstack[j][i]
+            container = tmp_stack[j][i]
 
             # Add to stack
-            if stacknumber in stacks:
-                stacks[stacknumber].append(container)
+            if stack_number in stacks:
+                stacks[stack_number].append(container)
             else:
-                stacks[stacknumber] = [container]
+                stacks[stack_number] = [container]
 
     # Load move data (amount, from, to)
     moves = []
     found = False
     for line in data:
-        # Skip the first x lines until a empty line is found
+        # Skip the first x lines until an empty line is found
         if len(line) == 0:
             found = True
             continue
@@ -55,10 +56,10 @@ def load(data):
         if found:
             moves.append(parse("move {:d} from {:d} to {:d}", line).fixed)
 
-    return (stacks, moves)
+    return stacks, moves
 
 
-def part1(data): # Move one container at a time
+def part1(data):  # Move one container at a time
     stacks = data[0]
     moves = data[1]
 
@@ -73,11 +74,12 @@ def part1(data): # Move one container at a time
             stacks[str(to_)].append(container)
 
     # Count containers on top
-    containers =""
+    containers = ""
     for s in stacks:
         containers += stacks[s][-1]
 
-    print("Part 1:", containers) # TLFGBZHCN
+    print("Part 1:", containers)  # TLFGBZHCN
+
 
 def part2(data):
     # move all containers at once
@@ -97,11 +99,11 @@ def part2(data):
         stacks[str(to_)].extend(containers)
 
     # Count containers on top
-    containers =""
+    containers = ""
     for s in stacks:
         containers += stacks[s][-1]
 
-    print("Part 2:", containers) # QRQFHFWCL
+    print("Part 2:", containers)  # QRQFHFWCL
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 from aocd.models import Puzzle
-from FS_Node import FS_Node
+from FsNode import FsNode
 
 puzzle = Puzzle(year=2022, day=7)
 
@@ -7,22 +7,23 @@ puzzle = Puzzle(year=2022, day=7)
 with open("Day07/puzzle.txt", "w", encoding='utf-8') as f:
     f.write(puzzle.input_data)
 
-def load(data):
-    root = FS_Node("/") # Start at root node by default
 
-    current_line = 1 # Starting at line 1
+def load(data):
+    root = FsNode("/")  # Start at root node by default
+
+    current_line = 1  # Starting at line 1
     current_dir = root
 
     while current_line < len(data):
         line = data[current_line]
 
-        if line.startswith("$ cd"): # Change directory
+        if line.startswith("$ cd"):  # Change directory
             # Get the directory name
             dir_name = line.split(" ")[2]
             current_dir = current_dir.cd(dir_name)
             current_line += 1
 
-        elif line.startswith("$ ls"): # List directory
+        elif line.startswith("$ ls"):  # List directory
             current_line += 1
 
             # Check as long as we're not at the end of the file or the next command
@@ -48,7 +49,7 @@ def load(data):
 
 
 def part1(root):
-    MAX_SIZE = 100_000 # 100 KB
+    MAX_SIZE = 100_000  # 100 KB
 
     total_size = 0
     # Get the size of each file
@@ -58,14 +59,14 @@ def part1(root):
         if size <= MAX_SIZE:
             total_size += size
 
-    print("Part 1:", total_size) # 1989474
+    print("Part 1:", total_size)  # 1989474
 
 
 def part2(root):
-    DISK_SIZE = 70_000_000 # 70 MB
-    UPDATE_SIZE = 30_000_000 # 30 MB
+    DISK_SIZE = 70_000_000  # 70 MB
+    UPDATE_SIZE = 30_000_000  # 30 MB
 
-    CURRENT_FREE_SPACE = DISK_SIZE - root.get_size() # Get current free space
+    CURRENT_FREE_SPACE = DISK_SIZE - root.get_size()  # Get current free space
 
     possible_dirs = []
 
@@ -75,7 +76,7 @@ def part2(root):
         if d.get_size() + CURRENT_FREE_SPACE >= UPDATE_SIZE:
             possible_dirs.append(d.get_size())
 
-    print("Part 2:", min(possible_dirs)) # 1111607
+    print("Part 2:", min(possible_dirs))  # 1111607
 
 
 if __name__ == "__main__":

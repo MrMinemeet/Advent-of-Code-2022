@@ -12,6 +12,7 @@ def load(data):
     # Load into an np array
     return np.array([list(line.strip()) for line in data])
 
+
 # Checks if a given point is visible from the border
 # This means nothing bigger obstructs the view
 def is_visible_from_border(data, x, y):
@@ -61,9 +62,9 @@ def is_visible_from_border(data, x, y):
         # If we didn't break, the point is visible
         return True
 
-
     # The point is not visible
     return False
+
 
 def get_view_distance(data, x, y):
     scenic_score = 1
@@ -126,7 +127,7 @@ def part1(data):
             if is_visible_from_border(data, x, y):
                 visible += 1
 
-    print("Part 1:", visible) # 1854
+    print("Part 1:", visible)  # 1854
 
 
 def part2(data):
@@ -137,7 +138,7 @@ def part2(data):
         for y in range(data.shape[1]):
             considerations.append(get_view_distance(data, x, y))
 
-    print("Part 2:", max(considerations)) # 527340
+    print("Part 2:", max(considerations))  # 527340
 
 
 if __name__ == "__main__":

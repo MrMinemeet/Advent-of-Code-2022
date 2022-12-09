@@ -8,7 +8,6 @@ puzzle = Puzzle(year=2022, day=9)
 with open("Day09/puzzle.txt", "w", encoding='utf-8') as f:
     f.write(puzzle.input_data)
 
-
 def load(data):
     movement = []
 
