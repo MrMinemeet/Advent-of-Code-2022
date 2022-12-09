@@ -1,11 +1,10 @@
 from aocd.models import Puzzle
 import numpy as np
 
-puzzle = Puzzle(year=2022, day=8)
 
-# Store raw data in a file for later
-with open("Day08/puzzle.txt", "w", encoding='utf-8') as f:
-    f.write(puzzle.input_data)
+def save(data, name):
+    with open(name, "w", encoding='utf-8') as f:
+        f.write(data)
 
 
 def load(data):
@@ -142,5 +141,11 @@ def part2(data):
 
 
 if __name__ == "__main__":
+    puzzle = Puzzle(year=2022, day=8)
+
+    # Store raw data in a file for later
+    save(puzzle.input_data, "Day08/puzzle.txt")
+
+    # Execute part1 and part2
     part1(load(puzzle.input_data.splitlines()))
     part2(load(puzzle.input_data.splitlines()))
