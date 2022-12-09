@@ -22,7 +22,3 @@ Maybe I'll do it a few days later when I have more time.
 ## Requirements
 I specified the requirements in the `requirements.txt` file. You can install them with `pip install -r requirements.txt`.
 Make sure to keep an eye on it as I may update it during the event.
-
-## Requirements
-I specified the requirements in the `requirements.txt` file. You can install them with `pip install -r requirements.txt`.
-Make sure to keep an eye on it as I may update it during the event.
