@@ -3,7 +3,7 @@ from parse import parse
 
 
 def save(data, name):
-    with open(name, "w", encoding='utf-8') as f:
+    with open(name, "w+", encoding='utf-8') as f:
         f.write(data)
 
 
