@@ -6,8 +6,8 @@ I'll try to clean the code up before committing it, but I'm not sure how much ti
 Maybe I'll do it a few days later when I have more time.
 
 ## Puzzle Solutions:
-|Day | Puzzle                                                         | My Solution                              |
-|---:|:---------------------------------------------------------------|:-----------------------------------------|
+|Day | Puzzle                                                         | My Solution                                 |
+|---:|:---------------------------------------------------------------|:--------------------------------------------|
 |  1 | [Calorie Counting](https://adventofcode.com/2022/day/1)        | [:pretzel: day1.py](Day01/day01.py)         |
 |  2 | [Rock Paper Scissors](https://adventofcode.com/2022/day/2)     | [:scissors: day2.py](Day02/day02.py)        |
 |  3 | [Rucksack Reorganisation](https://adventofcode.com/2022/day/3) | [:school_satchel: day3.py](Day03/day03.py)  |
@@ -17,6 +17,7 @@ Maybe I'll do it a few days later when I have more time.
 |  7 | [No Space Left On Device](https://adventofcode.com/2022/day/7) | [:floppy_disk: day7.py](Day07/day07.py)     |
 |  8 | [Treetop Tree House](https://adventofcode.com/2022/day/8)      | [:evergreen_tree: day8.py](Day08/day08.py)  |
 |  9 | [Rope Ridge](https://adventofcode.com/2022/day/9)              | [:knot: day9.py](Day09/day09.py)            |
+| 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)       | [:tv: day10.py](Day10/day10.py)             |
 
 
 ## Requirements
