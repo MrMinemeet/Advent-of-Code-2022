@@ -18,6 +18,7 @@ Maybe I'll do it a few days later when I have more time.
 |  8 | [Treetop Tree House](https://adventofcode.com/2022/day/8)      | [:evergreen_tree: day8.py](Day08/day08.py)  |
 |  9 | [Rope Ridge](https://adventofcode.com/2022/day/9)              | [:knot: day9.py](Day09/day09.py)            |
 | 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)       | [:tv: day10.py](Day10/day10.py)             |
+| 11 | [Monkey in the Middle](https://adventofcode.com/2022/day/11)   | [:monkey: day11.py](Day11/day11.py)         |
 
 
 ## Requirements
