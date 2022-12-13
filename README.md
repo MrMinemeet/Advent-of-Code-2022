@@ -20,6 +20,7 @@ Maybe I'll do it a few days later when I have more time.
 | 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)        | [:tv: day10.py](Day10/day10.py)             |
 | 11 | [Monkey in the Middle](https://adventofcode.com/2022/day/11)    | [:monkey: day11.py](Day11/day11.py)         |
 | 12 | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) | [:mountain: day12.py](Day12/day12.py)       |
+| 13 | [Distress Signal](https://adventofcode.com/2022/day/13)         | [:sos: day13.py](Day13/day13.py)            |
 
 
 ## Requirements
